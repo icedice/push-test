@@ -10,7 +10,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func unsubscripeTapped(_ sender: Any) {
-           Messaging.messaging().subscribe(toTopic: topicTxt.text!)
+           Messaging.messaging().unsubscribe(fromTopic: topicTxt.text!)
     }
 }
 
