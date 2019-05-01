@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="pushtest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="IEl-3n-RKo">
+                                <rect key="frame" x="20" y="64" width="374" height="176"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="zCX-hF-jjP">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="30"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Topic" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PVV-7A-hcO">
+                                                <rect key="frame" x="0.0" y="0.0" width="41.5" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="200" verticalHuggingPriority="200" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="jyllands-posten" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iaN-xK-CWg">
+                                                <rect key="frame" x="49.5" y="0.0" width="324.5" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ove-aG-4wU">
+                                        <rect key="frame" x="0.0" y="53" width="374" height="50"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="TJN-5D-yhh"/>
+                                        </constraints>
+                                        <state key="normal" title="Subscribe"/>
+                                        <connections>
+                                            <action selector="subscripeTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="327-q8-eqD"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j5C-9n-gJF">
+                                        <rect key="frame" x="0.0" y="126" width="374" height="50"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="kfB-5t-e3O"/>
+                                        </constraints>
+                                        <state key="normal" title="Unsubscribe"/>
+                                        <connections>
+                                            <action selector="unsubscripeTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cJk-Ag-4hF"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="ove-aG-4wU" firstAttribute="leading" secondItem="IEl-3n-RKo" secondAttribute="leading" id="7b3-ES-6qU"/>
+                                    <constraint firstAttribute="trailing" secondItem="j5C-9n-gJF" secondAttribute="trailing" id="a0k-FQ-Bsw"/>
+                                    <constraint firstItem="j5C-9n-gJF" firstAttribute="leading" secondItem="IEl-3n-RKo" secondAttribute="leading" id="c7i-nd-GzM"/>
+                                    <constraint firstAttribute="trailing" secondItem="ove-aG-4wU" secondAttribute="trailing" id="juc-5f-Tax"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="IEl-3n-RKo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="A0p-po-vY1"/>
+                            <constraint firstItem="IEl-3n-RKo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="cG4-p6-9Nj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IEl-3n-RKo" secondAttribute="trailing" constant="20" id="rAe-Nj-uYS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="topicTxt" destination="iaN-xK-CWg" id="QRg-wW-Jwy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="120.53571428571428"/>
+        </scene>
+    </scenes>
+</document>
